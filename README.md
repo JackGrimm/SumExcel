@@ -5,18 +5,19 @@ This is my first public git program, so it is work in progress. There are many c
 
 The input is a string of numbers seperated by a comma, the goal number as a string, and a leeway number string.
 
-Example Input: Calculations("1.0,2,3.1,4,5,6,",
+Example Input: Calculations("-1.0,2,3.1,4,5,6,",
                             "10",
                             "0.5")
 
-The input strings are all cleaned and the input list is seperated into an array. 
+The input strings are all cleaned and the input list is seperated into an array in ascending order. 
 Calculations are done with recursion to see what numbers add up to the goal. 
+If the numbers added exceed the goal, it breaks out of that recursive loop and moves on. 
 The output is an array that contains all the arrays of combinations that add up to the goal number. 
 
 Example Output:[
-                [1.0, 2.0, 3.1, 4.0], 
-                [1.0, 3.1, 6.0], 
-                [1.0, 4.0, 5.0], 
+                [-1.0, 2.0, 3.1, 6.0],
+                [-1.0, 2.0, 4.0, 5.0], 
+                [-1.0, 5.0, 6.0], 
                 [2.0, 3.1, 5.0], 
                 [4.0, 6.0]
                 ]
